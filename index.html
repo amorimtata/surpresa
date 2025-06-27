@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Surpresa!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      min-height: 100vh;
+      background: linear-gradient(120deg, #0a0c12 0%, #14213d 100%);
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+      color: #e3eaff;
+      padding: 20px;
+    }
+    .center-box, .container {
+      background: rgba(10, 18, 36, 0.92);
+      border-radius: 18px;
+      box-shadow: 0 4px 32px #000a, 0 0 0 2px #1a2a4a;
+      padding: 38px 32px 32px 32px;
+      max-width: 420px;
+      margin: auto;
+      z-index: 2;
+      animation: fadein 1s;
+      border: 1.5px solid #1a2a4a;
+    }
+    @keyframes fadein {
+      from { opacity: 0; transform: scale(0.97);}
+      to { opacity: 1; transform: scale(1);}
+    }
+    .hidden {
+      display: none;
+    }
+    .btn {
+      margin-top: 28px;
+      padding: 14px 36px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #1a2a4a 0%, #264b8c 100%);
+      color: #e3eaff;
+      cursor: pointer;
+      box-shadow: 0 2px 12px #0005;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn:hover {
+      background: linear-gradient(90deg, #264b8c 0%, #1a2a4a 100%);
+      transform: translateY(-2px) scale(1.03);
+    }
+    /* Mensagem de aniversário */
+    .container {
+      max-width: 600px;
+      padding: 34px 30px 28px 30px;
+      background: rgba(10, 18, 36, 0.96);
+      border-radius: 20px;
+      box-shadow: 0 0 32px 4px #000a;
+      position: relative;
+      z-index: 2;
+      margin: auto;
+      animation: fadein 1s;
+      border: 1.5px solid #264b8c;
+    }
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.3rem;
+      color: #4f8cff;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 12px #14213d44;
+    }
+    p {
+      font-size: 1.13rem;
+      color: #b3cfff;
+      line-height: 1.7;
+      margin-bottom: 16px;
+      text-shadow: 0 1px 8px #0a0c1244;
+    }
+    footer {
+      margin-top: 18px;
+      font-size: 1rem;
+      color: #7faaff;
+      letter-spacing: 0.5px;
+      text-shadow: 0 1px 8px #0a0c1244;
+    }
+    /* Balões azul sólido */
+    .balloon {
+      position: absolute;
+      bottom: -120px;
+      width: 44px;
+      height: 64px;
+      background: #0000FF;
+      border-radius: 50% 50% 48% 52% / 60% 60% 40% 40%;
+      box-shadow: 0 8px 24px #000a, 0 0 0 4px #e3eaff22 inset;
+      animation: floatUp linear infinite;
+      opacity: 0.93;
+      z-index: 1;
+      border: 2px solid #e3eaff33;
+      filter: blur(0.2px) brightness(1.02);
+    }
+    .balloon::after {
+      content: "";
+      position: absolute;
+      bottom: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2.5px;
+      height: 18px;
+      background: linear-gradient(to bottom, #e3eaff, #264b8ccc 80%);
+      border-radius: 2px;
+    }
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1) rotate(-2deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-120vh) scale(1.07) rotate(6deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Tela inicial -->
+  <div class="center-box" id="startBox">
+    <h2>OLÁ MEU AMOR<br>TENHO UMA SURPRESA PARA VOCÊ!!!!</h2>
+    <button class="btn" id="showBtn">Clique aqui</button>
+  </div>
+  <!-- Mensagem de aniversário -->
+  <div class="container hidden" id="mainBox">
+    <h1>Feliz aniversário, Meu Amor!!! 🎈</h1>
+    <p>
+      Minha futura e digníssima esposa!<br>
+      (Só falta oficializar)  <br>
+      Espero que você goste! 💙
+    </p>
+    <p>
+      Ana, você é a pessoa mais especial que tenho na minha vida.<br>
+      Você vem me ensinando muita coisa e espero que seja assim hoje e sempre.
+    </p>
+    <p>
+      Você é essa garota foda que eu vejo evoluindo muito nos últimos 4 anos,<br>
+      e isso só me enche de orgulho.<br>
+      Orgulho de estar ao seu lado e presenciar tudo isso.
+    </p>
+    <p>
+      Saiba que você é linda por dentro e por fora,  
+      e que é simplesmente incrível.
+    </p>
+    <p>
+      Você é, e sempre será, a minha garota do cabelo preto e azul. 💙
+    </p>
+    <p style="font-size: 0.7rem; font-weight: bold; color: #00bfff; margin-top: -10px; letter-spacing: 1px;">
+      (CRLH, TÁ LIGADO QUE EU TO CASADA COM A GAROTA DO CABELO PRETO E AZUL QUE EU VI DENTRO DA BEMOL E PROCUREI POR DIAS?)
+    </p>
+    <footer>Eu Te Amo. Hoje e sempre. 💫</footer>
+  </div>
+  
+  <script>
+    // Troca de tela ao clicar no botão
+    document.getElementById('showBtn').onclick = function() {
+      document.getElementById('startBox').classList.add('hidden');
+      document.getElementById('mainBox').classList.remove('hidden');
+      startBalloons();
+    };
+
+    // Função para criar balões azul sólido
+    function createBalloon() {
+      const balloon = document.createElement('div');
+      balloon.classList.add('balloon');
+      balloon.style.left = Math.random() * 100 + 'vw';
+      // Azul sólido
+      balloon.style.background = '#0000FF';
+      balloon.style.animationDuration = (6 + Math.random() * 4) + 's';
+      document.body.appendChild(balloon);
+      setTimeout(() => balloon.remove(), 10000);
+    }
+    // Só começa os balões depois do clique
+    function startBalloons() {
+      createBalloon();
+      window.balloonsInterval = setInterval(createBalloon, 400);
+    }
+  </script>
+</body>
+</html> 
